@@ -1,9 +1,9 @@
-const body = document.querySelector('body');
-const startBtn = document.querySelector('[data-start]');
-const stopBtn = document.querySelector('[data-stop]');
+const body = document.querySelector("body");
+const startBtn = document.querySelector("[data-start]");
+const stopBtn = document.querySelector("[data-stop]");
 
-startBtn.addEventListener('click', onStartClick);
-stopBtn.addEventListener('click', onStopClick);
+startBtn.addEventListener("click", onStartClick);
+stopBtn.addEventListener("click", onStopClick);
 
 const INTERVAL_DELAY = 1000;
 let intervalId = null;

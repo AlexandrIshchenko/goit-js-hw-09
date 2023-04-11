@@ -1,0 +1,72 @@
+:root {
+    --primary-brand: #4D5AE5;
+    --light: #F4F4FD;
+    --accent: #E7E9FC;
+    --white: #FFFFFF;
+}
+
+
+.input_button {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+button {
+    background-color: var(--light);
+    color: var(--primary-brand);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    outline: none;
+
+    transition-property: background-color, color, box-shadow, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover,
+button:focus {
+    background-color: var(--primary-brand);
+    color: var(--white);
+    border: 1px solid var(--primary-brand);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 2px 1px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+
+    transform: scale(1.1);
+}
+
+button:disabled {
+    background-color: var(--light);
+    color: var(--primary-brand);
+    border: 1px solid var(--accent);
+
+    opacity: 0.5;
+    transform: scale(1);
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.value {
+    font-size: 50px;
+}
