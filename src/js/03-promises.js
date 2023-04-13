@@ -29,7 +29,6 @@ function onSubmitForm(e) {
   let amountValue = Number(amount.value);
 
     for (let i = 1; i <= amountValue; i += 1) {
-      delayValue += stepValue;
 
       createPromise(i, delayValue)
         .then(({ position, delay }) => {
@@ -44,6 +43,7 @@ function onSubmitForm(e) {
             fontSize: '20px',
           },);
         });
-      form.reset();
+      delayValue += stepValue;
     }
-  }
+  form.reset();
+}
